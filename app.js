@@ -9,9 +9,9 @@ var express = require('express'),
     bodyParser = require('body-parser');
 
 /**
- * Initializing db "foundIT". If don't exist, will create a new one automatically
+ * Initializing db "databaseName". If don't exist, will create a new one automatically
  */
-var db = mongoose.connect('mongodb://localhost/foundIT');
+var db = mongoose.connect('mongodb://localhost/databaseName');
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -26,13 +26,15 @@ app.use(bodyParser.json());
  * Initializing all models here
  */
 var Book = require('./src/models/bookModel');
-
+var Person = require('./src/models/personModel');
 /**
  * Initializing all routers here
  */
 bookRouter = require('./src/Routes/bookRoutes')(Book);
+personRouter = require('./src/Routes/personRoutes')(Person);
 
 app.use('/api/books', bookRouter);
+app.use('/api/persons', personRouter);
 
 /**
  * Starting the server on specific port
