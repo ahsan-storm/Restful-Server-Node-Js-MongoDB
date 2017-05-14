@@ -66,7 +66,7 @@ var routes = function (Book) {
             req.book.read = req.body.read;
             req.book.save(function (err) {
                 if(err){
-                    err.status(500).send(err);
+                    res.status(500).send(err);
                 }
                 else{
                     res.json(req.book);
@@ -88,7 +88,7 @@ var routes = function (Book) {
 
             req.book.save(function (err) {
                 if(err){
-                    err.status(500).send(err);
+                    res.status(500).send(err);
                 }
                 else{
                     res.json(req.book);
