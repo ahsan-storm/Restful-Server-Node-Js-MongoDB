@@ -1,6 +1,6 @@
 # Restful Server Using Node JS and MongoDB
 
-This is a sample restfull server which supports the following operations:
+This is a sample restful server which supports the following operations:
 * GET
 * POST
 * PUT 
