@@ -1,4 +1,4 @@
-# Restfull Server Using Node JS and MongoDB
+# Restful Server Using Node JS and MongoDB
 
 This is a sample restfull server which supports the following operations:
 * GET
